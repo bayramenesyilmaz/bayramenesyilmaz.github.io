@@ -1,0 +1,395 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    min-height: 100vh;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ARKAPLAN */
+.background{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-top{
+    width: 100%;
+    height: 30%;
+    background-color: rgb(44, 44, 56);
+}
+
+.back-bottom{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(31, 30, 49);
+}
+
+/* MENÜ */
+.main{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/* ÜST MENÜ */
+.main-top{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+/* SWİTCH YAPIMI */
+
+.toggle-switch{
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    border-radius: 5rem;
+}
+
+.toggle-switch input{
+    display: none;
+}
+
+.circle{
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    border-radius: 5rem;
+}
+
+.circle::before{
+    background-color: rgb(112, 135, 199);
+    position: absolute;
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+input:checked + .circle{
+    background-color: rgb(112, 135, 199);
+}
+
+input:checked + .circle::before{
+    transform: translateX(20px);
+    background-color: white;
+}
+
+.baslik h5{
+    color: rgb(168, 168, 168);
+    margin-top: .5rem;
+}
+
+.top-socialbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bigbox{
+    border-radius: .2rem;
+    width: 22%;
+    height: 300px;
+    background-color: rgb(53, 53, 83);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.cizgi{
+    border-radius: .2rem .2rem 0 0;
+    background-color: rgb(61, 149, 250);
+    width: 100%;
+    height: .4rem;
+    position: absolute;
+    top: 0;
+}
+.cizgi-i{
+    background: linear-gradient(to left, rgb(192, 89, 106),orange);
+}
+.cizgi-y{
+    background-color: red;
+}
+
+
+
+.bigbox i{
+    font-size: 1.5rem;
+    
+}
+.bigbox  a{
+    color:  rgb(206, 206, 206);
+    text-decoration: none;
+    padding-left:.5rem;
+}
+
+.p-bignumber{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.p-followers{
+    font-size: .9rem;
+    letter-spacing: .2rem;
+    color: rgb(168, 168, 168);
+    
+}
+
+.p-today{
+    font-size: .8rem;
+}
+
+
+
+
+
+
+/* ALT MENÜ */
+.main-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.main-bottom h2{
+    width: 100%;
+    height: 20%;
+}
+
+.bottom-socialbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80%;
+}
+
+.smallbox{
+    width: 22%;
+    height: 120px;
+    background-color: rgb(45, 45, 77);
+    position: relative;
+    border-radius: .3rem;
+    box-shadow: 0 0 5px 0 turquoise;
+}
+
+
+.smallbox .yazi{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: rgb(168, 168, 168);
+}
+.smallbox i{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+}
+.smallbox .rakam{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.smallbox .deger{
+    position: absolute;
+    bottom: 1rem;
+    right: .5rem;
+    font-size: .9rem;
+}
+
+/* DEĞER RENKLERİ */
+.good{
+    box-shadow: 0 0 5px 1px rgb(58, 218, 138);
+}
+
+.bad{
+    box-shadow: 0 0 5px 1px orangered;
+}
+
+.kotu{
+    color: orangered;
+}
+.kotu::before{
+    display: inline-block;
+    content: ' ';
+    border: 5px solid transparent;
+    border-top-color: red;
+    position: relative;
+    top: .2rem;
+    left: -.2rem;
+}
+
+.bottom-socialbox .kotu{
+    color: orangered;
+}
+
+
+.iyi{
+    color:rgb(58, 218, 138) ;
+}
+
+.iyi::before{
+    display: inline-block;
+    content: ' ';
+    border: 5px solid transparent;
+    border-bottom-color: rgb(58, 218, 138);
+    position: relative;
+    bottom: .2rem;
+    left: -.2rem;
+}
+
+
+.mavi{
+    color: rgb(61, 149, 250);
+}
+
+.pembe{
+    color: pink
+}
+
+.kirmizi{
+    color: rgb(53, 53, 83);
+    background-color: red;
+    padding: .2rem;
+    border-radius: 5rem;
+}
+
+/* ANİMASYON */
+.bigbox:hover{
+    animation: kutuShow .5s ease-in-out forwards;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+.smallbox:hover{
+    animation: kutuShow .5s ease-in-out forwards;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+
+
+@keyframes kutuShow {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        
+        transform: rotate(2deg);
+    }
+    75%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width:576px) and (max-width:1020px) {
+
+    .background{
+        height:150vh;
+    }
+
+    .toggle-switch{
+        top: 3rem;
+    }
+
+    .top-socialbox{
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .bigbox{
+        width: 40%;
+        height: 40%;
+        margin: 0;
+    }
+    
+    .bottom-socialbox{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .smallbox{
+        width: 40%;
+        height: 20%;
+        margin: 0;
+    }
+
+    .main h2{
+        height: 5%;
+    }
+}
+
+@media (max-width:575px) {
+
+    .background{
+        height:350vh;
+    }
+
+    .toggle-switch{
+        top: 3rem;
+    }
+    .top-socialbox{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bigbox{
+        width: 80%;
+        height: 20%;
+        margin: 1.5rem 0;
+    }
+    
+    .bottom-socialbox{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .smallbox{
+        width: 80%;
+        height: 11%;
+        margin: 1rem 0;
+    }
+
+    .main h2{
+        height: 5%;
+    }
+}

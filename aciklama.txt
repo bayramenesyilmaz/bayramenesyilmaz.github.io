@@ -1,0 +1,1 @@
+utular hover moduna geldiğinde hafif hareket edicekler animasyon olarak
